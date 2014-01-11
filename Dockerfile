@@ -13,10 +13,8 @@ RUN echo "deb http://packages.elasticsearch.org/elasticsearch/1.0/debian stable 
 RUN apt-get update
 RUN apt-get install -y elasticsearch
 
-# Mount directory.
-VOLUME ["/elasticsearch"]
-
 # Expose ports.
 #   - 9200: HTTP
 #   - 9300: transport
-EXPOSE 9200 9300
+EXPOSE 9200
+EXPOSE 9300

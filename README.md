@@ -20,4 +20,4 @@ This repository contains **Dockerfile** of [ElasticSearch](http://www.elasticsea
 
 ### Usage
 
-    docker run dockerfile/elasticsearch
+    docker run -p 9200:9200 -p 9300:9300 dockerfile/elasticsearch
