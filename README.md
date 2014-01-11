@@ -1,1 +1,1 @@
-# ElasticSearch Dockerfile for Trusted Builds
+## ElasticSearch Dockerfile for Trusted Builds
