@@ -6,7 +6,7 @@ This repository contains **Dockerfile** of [ElasticSearch](http://www.elasticsea
 
 ### Dependencies
 
-* [dockerfile/ubuntu](https://github.com/dockerfile/ubuntu)
+* [dockerfile/java](https://github.com/dockerfile/java)
 
 
 ### Installation
