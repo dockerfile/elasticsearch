@@ -21,3 +21,6 @@ RUN sed -i 's/MAX_OPEN_FILES=/# MAX_OPEN_FILES=/g' /etc/init.d/elasticsearch
 #   - 9300: transport
 EXPOSE 9200
 EXPOSE 9300
+
+# Define an entry point.
+ENTRYPOINT ["/usr/share/elasticsearch/bin/elasticsearch"]
