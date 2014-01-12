@@ -13,6 +13,9 @@ RUN echo "deb http://packages.elasticsearch.org/elasticsearch/1.0/debian stable 
 RUN apt-get update
 RUN apt-get install -y elasticsearch
 
+# Prevent elasticsearch calling `ulimit`.
+RUN sed -i 's/MAX_OPEN_FILES=/# MAX_OPEN_FILES=/g' /etc/init.d/elasticsearch
+
 # Expose ports.
 #   - 9200: HTTP
 #   - 9300: transport

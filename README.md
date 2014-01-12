@@ -15,9 +15,9 @@ This repository contains **Dockerfile** of [ElasticSearch](http://www.elasticsea
 
 2. Download [trusted build](https://index.docker.io/u/dockerfile/elasticsearch/) from public [Docker Registry](https://index.docker.io/): `docker pull dockerfile/elasticsearch`
 
-   (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/elasticsearch" .`)
+   (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/elasticsearch" github.com/dockerfile/elasticsearch`)
 
 
 ### Usage
 
-    docker run -p 9200:9200 -p 9300:9300 dockerfile/elasticsearch
+    docker run -d -p 9200:9200 -p 9300:9300 dockerfile/elasticsearch
