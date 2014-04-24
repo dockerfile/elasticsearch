@@ -9,10 +9,10 @@ FROM dockerfile/java
  
 # Install ElasticSearch.
  
-RUN wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.0.1.tar.gz
-RUN tar xzf elasticsearch-1.0.1.tar.gz
-RUN mv elasticsearch-1.0.1 /opt/elasticsearch
-RUN rm elasticsearch-1.0.1.tar.gz
+RUN wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.1.1.tar.gz
+RUN tar xzf elasticsearch-1.1.1.tar.gz
+RUN mv elasticsearch-1.1.1 /opt/elasticsearch
+RUN rm elasticsearch-1.1.1.tar.gz
  
 # Expose ports.
 #   - 9200: HTTP
