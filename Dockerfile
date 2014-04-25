@@ -8,17 +8,22 @@
 FROM dockerfile/java
  
 # Install ElasticSearch.
- 
-RUN wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.1.1.tar.gz
-RUN tar xzf elasticsearch-1.1.1.tar.gz
-RUN mv elasticsearch-1.1.1 /opt/elasticsearch
-RUN rm elasticsearch-1.1.1.tar.gz
- 
+RUN cd /tmp && wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.1.1.tar.gz
+RUN cd /tmp && tar xvzf elasticsearch-1.1.1.tar.gz
+RUN cd /tmp && rm -f elasticsearch-1.1.1.tar.gz
+RUN mv /tmp/elasticsearch-1.1.1 /elasticsearch
+
+# Define mountable directories.
+VOLUME ["/data"]
+
+# Define working directory.
+WORKDIR "/data"
+
+# Define default command.
+ENTRYPOINT ["/elasticsearch/bin/elasticsearch"]
+
 # Expose ports.
 #   - 9200: HTTP
 #   - 9300: transport
 EXPOSE 9200
 EXPOSE 9300
- 
-# Define an entry point.
-ENTRYPOINT ["/opt/elasticsearch/bin/elasticsearch"]
