@@ -21,3 +21,21 @@ This repository contains **Dockerfile** of [ElasticSearch](http://www.elasticsea
 ### Usage
 
     docker run -d -p 9200:9200 -p 9300:9300 dockerfile/elasticsearch
+
+#### Attach persistent/shared directories
+
+  1. Create a mountable data directory `<data-dir>` on the host.
+
+  2. Create ElasticSearch config file at `<data-dir>/elasticsearch.yml`.
+
+```yml
+path:
+  logs: /data/log
+  data: /data/data
+```
+
+  3. Start a container by mounting data directory and specifying the custom configuration file:
+
+    docker run -d -p 9200:9200 -p 9300:9300 -v <data-dir>:/data dockerfile/elasticsearch -Des.config=/data/elasticsearch.yml
+
+Open `http://<host>:9200` to see the result.
