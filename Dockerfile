@@ -16,7 +16,7 @@ RUN mv /tmp/elasticsearch-1.1.1 /elasticsearch
 VOLUME ["/data"]
 
 # Define working directory.
-WORKDIR "/data"
+WORKDIR /data
 
 # Define default command.
 ENTRYPOINT ["/elasticsearch/bin/elasticsearch"]
