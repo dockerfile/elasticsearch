@@ -19,7 +19,7 @@ VOLUME ["/data"]
 WORKDIR /data
 
 # Define default command.
-ENTRYPOINT ["/elasticsearch/bin/elasticsearch"]
+CMD ["/elasticsearch/bin/elasticsearch"]
 
 # Expose ports.
 #   - 9200: HTTP
