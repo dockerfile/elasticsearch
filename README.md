@@ -40,4 +40,4 @@ This repository contains **Dockerfile** of [ElasticSearch](http://www.elasticsea
     docker run -d -p 9200:9200 -p 9300:9300 -v <data-dir>:/data dockerfile/elasticsearch /elasticsearch/bin/elasticsearch -Des.config=/data/elasticsearch.yml
     ```
 
-Open `http://<host>:9200` to see the result.
+After few seconds, open `http://<host>:9200` to see the result.
