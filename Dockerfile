@@ -10,10 +10,10 @@ FROM dockerfile/java
 # Install ElasticSearch.
 RUN \
   cd /tmp && \
-  wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.1.1.tar.gz && \
-  tar xvzf elasticsearch-1.1.1.tar.gz && \
-  rm -f elasticsearch-1.1.1.tar.gz && \
-  mv /tmp/elasticsearch-1.1.1 /elasticsearch
+  wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.2.1.tar.gz && \
+  tar xvzf elasticsearch-1.2.1.tar.gz && \
+  rm -f elasticsearch-1.2.1.tar.gz && \
+  mv /tmp/elasticsearch-1.2.1 /elasticsearch
 
 # Define mountable directories.
 VOLUME ["/data"]
