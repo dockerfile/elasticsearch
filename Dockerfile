@@ -18,6 +18,9 @@ RUN \
 # Define mountable directories.
 VOLUME ["/data"]
 
+# Mount elasticsearch.yml config
+ADD config/elasticsearch.yml /elasticsearch/config/elasticsearch.yml
+
 # Define working directory.
 WORKDIR /data
 
