@@ -37,7 +37,7 @@ This repository contains **Dockerfile** of [ElasticSearch](http://www.elasticsea
   3. Start a container by mounting data directory and specifying the custom configuration file:
 
     ```sh
-    docker run -d -p 9200:9200 -p 9300:9300 -v <data-dir>:/data dockerfile/elasticsearch /elasticsearch/bin/elasticsearch -Des.config=/data/elasticsearch.yml
+    docker run -d -p 9200:9200 -p 9300:9300 -v <data-dir>:/data dockerfile/elasticsearch -Des.config=/data/elasticsearch.yml
     ```
 
 After few seconds, open `http://<host>:9200` to see the result.
