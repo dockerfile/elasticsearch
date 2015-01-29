@@ -1,5 +1,5 @@
 #
-# ElasticSearch Dockerfile
+# Elasticsearch Dockerfile
 #
 # https://github.com/dockerfile/elasticsearch
 #
@@ -9,7 +9,7 @@ FROM dockerfile/java:oracle-java8
 
 ENV ES_PKG_NAME elasticsearch-1.4.2
 
-# Install ElasticSearch.
+# Install Elasticsearch.
 RUN \
   cd / && \
   wget https://download.elasticsearch.org/elasticsearch/elasticsearch/$ES_PKG_NAME.tar.gz && \
