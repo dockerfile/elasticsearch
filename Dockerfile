@@ -34,3 +34,6 @@ CMD ["/elasticsearch/bin/elasticsearch"]
 #   - 9300: transport
 EXPOSE 9200
 EXPOSE 9300
+
+ENV SERVICE_9200_NAME elasticsearch-http
+ENV SERVICE_9300_NAME elasticsearch-transport
