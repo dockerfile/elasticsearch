@@ -7,7 +7,7 @@
 # Pull base image.
 FROM dockerfile/java:oracle-java8
 
-ENV ES_PKG_NAME elasticsearch-1.4.2
+ENV ES_PKG_NAME elasticsearch-1.4.3
 
 # Install Elasticsearch.
 RUN \
