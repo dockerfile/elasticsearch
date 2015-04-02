@@ -3,3 +3,5 @@ path:
   logs: /data/log
   plugins: /data/plugins
   work: /data/work
+
+http.cors.allow-origin: "*"
