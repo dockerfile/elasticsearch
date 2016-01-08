@@ -23,7 +23,8 @@ This repository contains **Dockerfile** of [Elasticsearch v2.1.1](http://www.ela
 ### Usage
 
 ```sh 
-docker run -d -p 9200:9200 -p 9300:9300 -v "$PWD/data":/data <image_name> /elasticsearch/bin/elasticsearch -Des.network.host=::0
+docker run -d -p 9200:9200 -p 9300:9300 -v "$PWD/data":/data <image_name> \ 
+        /elasticsearch/bin/elasticsearch -Des.network.host=::0
 ```
 
 Above command will automatically create `data` directory in folder where you run it. If you want to have `data` in some other directory, change the part `$PWD/data` to desired path.
