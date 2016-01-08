@@ -5,28 +5,28 @@
 #
 
 # Pull base image.
-FROM dockerfile/java:oracle-java8
+FROM java:7
 
-ENV ES_PKG_NAME elasticsearch-1.5.0
+ENV ES_PKG_NAME elasticsearch-2.1.1
 
 # Install Elasticsearch.
 RUN \
-  cd / && \
-  wget https://download.elasticsearch.org/elasticsearch/elasticsearch/$ES_PKG_NAME.tar.gz && \
-  tar xvzf $ES_PKG_NAME.tar.gz && \
-  rm -f $ES_PKG_NAME.tar.gz && \
-  mv /$ES_PKG_NAME /elasticsearch
+    cd / && \
+    wget https://download.elasticsearch.org/elasticsearch/elasticsearch/$ES_PKG_NAME.tar.gz && \
+    tar xf $ES_PKG_NAME.tar.gz && \
+    mv $ES_PKG_NAME elasticsearch && \
+    /elasticsearch/bin/plugin install mobz/elasticsearch-head
 
-# Define mountable directories.
 VOLUME ["/data"]
 
 # Mount elasticsearch.yml config
 ADD config/elasticsearch.yml /elasticsearch/config/elasticsearch.yml
 
-# Define working directory.
 WORKDIR /data
 
 # Define default command.
+RUN useradd -ms /bin/bash es
+USER es
 CMD ["/elasticsearch/bin/elasticsearch"]
 
 # Expose ports.
