@@ -1,5 +1,7 @@
 path:
   data: /data/data
   logs: /data/log
-  plugins: /data/plugins
   work: /data/work
+  scripts: /data/scripts
+script.inline: on
+script.indexed: on
