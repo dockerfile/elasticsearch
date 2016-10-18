@@ -6,7 +6,7 @@ This repository contains **Dockerfile** of [Elasticsearch](http://www.elasticsea
 
 ### Base Docker Image
 
-* [dockerfile/java:oracle-java8](http://dockerfile.github.io/#/java)
+* [java:8](https://hub.docker.com/_/java/)
 
 
 ### Installation
